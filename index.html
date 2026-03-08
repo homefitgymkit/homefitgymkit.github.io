@@ -1,152 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HomeFitGymKit - Train Smart. Small Space.</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --orange:#FF6B35;
-  --black:#000;
-  --dark:#0a0a0a;
-  --card:#111;
-  --grey:#666;
-  --light:#ccc;
-}
-html{scroll-behavior:smooth}
-body{
-  background:var(--black);
-  color:#fff;
-  font-family:'DM Sans',sans-serif;
-  font-weight:300;
-  overflow-x:hidden;
-}
-nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:100;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 40px;
-  background:rgba(0,0,0,0.85);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid #1a1a1a;
-}
-.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;color:#fff;text-decoration:none}
-.nav-logo span{color:var(--orange)}
-.nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{color:var(--light);text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.2s}
-.nav-links a:hover{color:var(--orange)}
-#hero{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:120px 40px 80px;
-  position:relative;
-  overflow:hidden;
-}
-.hero-bg{
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:radial-gradient(ellipse 60% 50% at 50% 60%,rgba(255,107,53,0.08) 0%,transparent 70%);
-}
-.hero-tag{
-  display:inline-block;
-  font-size:11px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  color:var(--orange);
-  border:1px solid rgba(255,107,53,0.4);
-  padding:6px 16px;
-  border-radius:2px;
-  margin-bottom:32px;
-}
-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,10vw,120px);line-height:0.9;letter-spacing:2px;margin-bottom:28px}
-h1 span{color:var(--orange)}
-.hero-sub{font-size:clamp(15px,2vw,18px);color:var(--light);max-width:520px;line-height:1.7;margin-bottom:48px}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
-.btn-primary{background:var(--orange);color:#000;font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:16px 36px;text-decoration:none;border-radius:2px;transition:transform 0.2s,box-shadow 0.2s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,107,53,0.4)}
-.btn-secondary{background:transparent;color:#fff;font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:15px 36px;text-decoration:none;border:1px solid rgba(255,255,255,0.25);border-radius:2px}
-.btn-secondary:hover{border-color:var(--orange);color:var(--orange)}
-section{padding:100px 40px;max-width:900px;margin:0 auto}
-.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:16px;display:block}
-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,60px);letter-spacing:2px;line-height:1;margin-bottom:24px}
-.section-text{color:var(--light);font-size:16px;line-height:1.8;max-width:600px}
-.divider{width:100%;height:3px;background:var(--orange);margin:0 auto}
-#quiz{text-align:center;background:var(--card);max-width:100%;padding:100px 40px;position:relative;overflow:hidden}
-.quiz-inner{max-width:700px;margin:0 auto}
-.quiz-inner .section-text{margin:0 auto 40px}
-.quiz-embed-btn{display:inline-flex;align-items:center;gap:12px;background:var(--orange);color:#000;font-family:'DM Sans',sans-serif;font-weight:500;font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:18px 44px;text-decoration:none;border-radius:2px}
-#products{padding:80px 24px}
-.products-inner{max-width:1000px;margin:0 auto;text-align:center}
-.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
-.product-card{
-  background:var(--card);
-  border-radius:4px;
-  padding:28px 24px;
-  text-align:left;
-  display:flex;
-  flex-direction:column;
-  min-height:500px; /* ensures equal height */
-}
-.product-badge{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
-.product-name{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;margin-bottom:4px;line-height:1.1}
-.product-price{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--grey);margin-bottom:16px}
-.product-score-bar{margin-bottom:16px;text-align:right;transition:max-height 0.3s ease;overflow:hidden;max-height:40px}
-.product-card:hover .product-score-bar{max-height:300px} /* expands on hover */
-.product-score-label{font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#fff;margin-bottom:6px}
-.product-score-total{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--orange);line-height:1;display:block;text-align:right}
-.product-score-max{font-family:'DM Sans',sans-serif;font-size:12px;color:var(--grey);display:inline-block;margin-left:4px}
-.product-criteria{list-style:none;padding:0;margin:0 0 20px 0;font-family:'DM Sans',sans-serif;font-size:12px;color:#fff;display:flex;flex-direction:column;gap:4px;flex:1}
-.product-criteria li{display:flex;justify-content:space-between;align-items:center}
-.product-criteria li span:first-child{font-size:14px;color:#fff;font-family:'DM Sans',sans-serif}
-.product-criteria li span:last-child{font-size:14px;font-weight:700;color:var(--orange);font-family:'DM Sans',sans-serif}
-.product-oneliner{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--light);margin-bottom:20px;font-style:italic}
-.btn-amazon{display:block;background:var(--orange);color:#000;font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:14px 24px;text-decoration:none;border-radius:2px;text-align:center;transition:transform 0.2s}
-.btn-amazon:hover{transform:translateY(-2px)}
-.products-inner .section-text{text-align:center;font-size:16px;max-width:640px;margin-left:auto;margin-right:auto}
-
-/* MOBILE */
-@media(max-width:700px){
-  nav{padding:16px 20px}
-  .nav-links{display:none}
-  section{padding:70px 24px}
-  #quiz{padding:70px 24px}
-  .hero-ctas{flex-direction:column;align-items:center}
-  .product-grid{grid-template-columns:1fr;gap:20px}
-}
-
-</style>
-</head>
-<body>
-<nav>
-  <a href="#" class="nav-logo">HOME<span>FIT</span>GYMKIT</a>
-  <ul class="nav-links">
-    <li><a href="#quiz">Quiz</a></li>
-    <li><a href="#leadmagnet">Free Guide</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#socials">Follow</a></li>
-  </ul>
-</nav>
-
 <section id="hero">
   <div class="hero-bg"></div>
   <span class="hero-tag">Train Smart. Small Space.</span>
   <h1>Build Your Gym.<br><span>Own Your Training.</span></h1>
   <p class="hero-sub">The complete resource for building a home gym and following a real training plan in a flat, apartment, or any small space. Kit recommendations, workout programmes, and no wasted money.</p>
   <div class="hero-ctas">
-    <a href="#quiz" class="btn-primary">Build Your Gym Quiz</a>
-    <a href="#leadmagnet" class="btn-secondary">Download the Guide</a>
+    <a href="#quiz" class="btn-primary">Take the Quiz</a>
+    <a href="#products" class="btn-secondary">View Products</a>
+    <a href="https://drive.google.com/file/d/1y1JoEzdW7dysbP_qqOpDH3NLE7WR5lNC/view?usp=drive_link" class="btn-secondary" target="_blank" rel="noopener">Download the Guide</a>
   </div>
 </section>
 
@@ -156,9 +16,8 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,60px);letter-spa
   <div class="quiz-inner">
     <span class="section-label">Personalised For You</span>
     <h2>Build Your Perfect Home Gym</h2>
-    <p class="section-text">Answer 5 quick questions to see your setup score and recommended gear.</p>
-    <div style="width:100%;height:500px;" data-fillout-id="5sSQ4VAYpkus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
-    <script src="https://server.fillout.com/embed/v1/"></script>
+    <p class="section-text">Answer 5 quick questions to see your setup score and recommended gear. Sent straight to your inbox, free.</p>
+    <a href="#quiz" class="quiz-embed-btn">Take the Quiz - 60 Seconds</a>
   </div>
 </section>
 
@@ -169,42 +28,69 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,60px);letter-spa
     <span class="section-label">Scored From Verified Reviews &amp; Specs</span>
     <h2>Featured Products</h2>
     <p class="section-text">Three picks across different budgets. Every score uses the same six-criteria system: value, build quality, apartment suitability, ease of setup, review consensus, and category-specific performance.</p>
+    
     <div class="product-grid">
       <div class="product-card">
         <div class="product-badge">Best Value for Money</div>
         <div class="product-name">Gritin Resistance Bands</div>
-        <div class="product-price">Set of 5 &mdash; ~£8</div>
+        <div class="product-price">Set of 5 &mdash; ~&pound;8</div>
         <div class="product-score-bar">
           <div class="product-score-label">Overall Score</div>
           <span class="product-score-total">4.21</span><span class="product-score-max">&nbsp;/ 5</span>
-          <ul class="product-criteria">
-            <li><span>Value for Money</span><span>5.0</span></li>
-            <li><span>Build Quality</span><span>3.5</span></li>
-            <li><span>Apartment Suitability</span><span>5.0</span></li>
-            <li><span>Ease of Setup</span><span>5.0</span></li>
-            <li><span>Review Consensus</span><span>4.0</span></li>
-            <li><span>Category Specific</span><span>3.5</span></li>
-          </ul>
         </div>
-        <div class="product-oneliner">The best £8 you can spend on your home gym.</div>
+        <ul class="product-criteria">
+          <li><span>Value for Money</span><span style="color:orange;">5.0</span></li>
+          <li><span>Build Quality</span><span style="color:orange;">3.5</span></li>
+          <li><span>Apartment Suitability</span><span style="color:orange;">5.0</span></li>
+          <li><span>Ease of Setup</span><span style="color:orange;">5.0</span></li>
+          <li><span>Review Consensus</span><span style="color:orange;">4.0</span></li>
+          <li><span>Category Specific</span><span style="color:orange;">3.5</span></li>
+        </ul>
+        <div class="product-oneliner">The best &pound;8 you can spend on your home gym.</div>
         <a href="https://amzn.to/3OUkLzj" class="btn-amazon" target="_blank" rel="noopener">Buy on Amazon UK</a>
       </div>
+
       <div class="product-card">
         <div class="product-badge">Best All-Rounder</div>
         <div class="product-name">Amazon Basics Kettlebell</div>
-        <div class="product-price">10kg Cast Iron &mdash; ~£30</div>
+        <div class="product-price">10kg Cast Iron &mdash; ~&pound;30</div>
         <div class="product-score-bar">
           <div class="product-score-label">Overall Score</div>
           <span class="product-score-total">4.57</span><span class="product-score-max">&nbsp;/ 5</span>
-          <ul class="product-criteria">
-            <li><span>Value for Money</span><span>4.8</span></li>
-            <li><span>Build Quality</span><span>4.5</span></li>
-            <li><span>Apartment Suitability</span><span>4.2</span></li>
-            <li><span>Ease of Setup</span><span>5.0</span></li>
-            <li><span>Review Consensus</span><span>4.8</span></li>
-            <li><span>Category Specific</span><span>4.3</span></li>
-          </ul>
         </div>
+        <ul class="product-criteria">
+          <li><span>Value for Money</span><span style="color:orange;">4.8</span></li>
+          <li><span>Build Quality</span><span style="color:orange;">4.5</span></li>
+          <li><span>Apartment Suitability</span><span style="color:orange;">4.2</span></li>
+          <li><span>Ease of Setup</span><span style="color:orange;">5.0</span></li>
+          <li><span>Review Consensus</span><span style="color:orange;">4.8</span></li>
+          <li><span>Category Specific</span><span style="color:orange;">4.3</span></li>
+        </ul>
         <div class="product-oneliner">#1 Best Seller. 12,700+ reviews. Cast iron, wide grip, done.</div>
         <a href="https://amzn.to/3P4bW5Z" class="btn-amazon" target="_blank" rel="noopener">Buy on Amazon UK</a>
       </div>
+
+      <div class="product-card">
+        <div class="product-badge">Best for Serious Training</div>
+        <div class="product-name">DH FitLife Adjustable Dumbbells</div>
+        <div class="product-price">2 x 18kg Pair &mdash; ~&pound;195</div>
+        <div class="product-score-bar">
+          <div class="product-score-label">Overall Score</div>
+          <span class="product-score-total">4.48</span><span class="product-score-max">&nbsp;/ 5</span>
+        </div>
+        <ul class="product-criteria">
+          <li><span>Value for Money</span><span style="color:orange;">4.0</span></li>
+          <li><span>Build Quality</span><span style="color:orange;">4.5</span></li>
+          <li><span>Apartment Suitability</span><span style="color:orange;">5.0</span></li>
+          <li><span>Ease of Setup</span><span style="color:orange;">4.5</span></li>
+          <li><span>Review Consensus</span><span style="color:orange;">4.7</span></li>
+          <li><span>Category Specific</span><span style="color:orange;">4.5</span></li>
+        </ul>
+        <div class="product-oneliner">12 weights in 1. Space-saving. Built for progressive overload.</div>
+        <a href="https://amzn.to/4sxrkGG" class="btn-amazon" target="_blank" rel="noopener">Buy on Amazon UK</a>
+      </div>
+    </div>
+
+    <p class="affiliate-note">HomeFitGymKit is a participant in the Amazon Associates programme. As an Amazon Associate we earn from qualifying purchases. This does not affect the price you pay.</p>
+  </div>
+</section>

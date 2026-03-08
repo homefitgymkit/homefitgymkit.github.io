@@ -69,8 +69,25 @@ footer span{color:var(--orange)}
 .product-score-label{font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);margin-bottom:6px}
 .product-score-total{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--orange);line-height:1}
 .product-score-max{font-family:'DM Sans',sans-serif;font-size:12px;color:var(--grey)}
-.product-criteria{list-style:none;padding:0;margin:0 0 20px 0;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--grey);display:flex;flex-direction:column;gap:4px;flex:1}
-.product-criteria li{display:flex;justify-content:space-between}
+.product-criteria{
+  list-style:none;
+  padding:0;
+  margin:0 0 20px 0;
+  font-family:'DM Sans',sans-serif;
+  font-size:12px;
+  color:var(--grey);
+  display:flex;
+  flex-direction:row; /* <-- change to row for horizontal layout */
+  gap:12px;           /* <-- space between criteria */
+  flex-wrap: wrap;     /* <-- wrap on smaller screens */
+  justify-content:space-between; /* <-- distribute evenly across row */
+}
+.product-criteria li{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-width:100pxz}
+  .product-criteria li{display:flex;justify-content:space-between}
 .product-criteria li span:last-child{color:#fff;font-weight:500}
 .product-oneliner{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--light);margin-bottom:20px;font-style:italic}
 .btn-amazon{display:block;background:var(--orange);color:#000;font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:14px 24px;text-decoration:none;border-radius:2px;text-align:center;transition:transform 0.2s}
@@ -229,7 +246,7 @@ footer span{color:var(--orange)}
   <span class="section-label">How We Score Products</span>
   <h3 style="font-family:'Bebas Neue',sans-serif; font-size:28px; margin-bottom:24px; color:#fff;">6-Criteria Scoring System</h3>
   <p style="color:var(--light); font-size:14px; line-height:1.6; margin-bottom:32px;">
-    Every product is reviewed and scored across six key criteria. Only products scoring 3.0+ overall are featured on HomeFitGymKit.
+    Every product is reviewed and scored across six key criteria. Only products scoring 3.5+ overall are featured on HomeFitGymKit.
   </p>
   <div class="scoring-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:20px;">
     <div class="score-card" style="background:var(--card); padding:20px; border-radius:4px; text-align:center;">

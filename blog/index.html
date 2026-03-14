@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Blog - HomeFitGymKit</title>
+<meta name="description" content="Home gym guides, equipment reviews, and workout tips for small spaces. Expert advice for building your perfect home gym in the UK.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--orange:#FF6B35;--black:#000;--dark:#0a0a0a;--card:#111;--grey:#666;--light:#ccc}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:#fff;font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);border-bottom:1px solid #1a1a1a}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;color:#fff;text-decoration:none}
+.nav-logo span{color:var(--orange)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{color:var(--light);text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover{color:var(--orange)}
+.blog-header{padding:120px 40px 60px;text-align:center;max-width:1400px;margin:0 auto}
+.blog-header h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);color:#fff;margin-bottom:16px}
+.blog-header p{color:var(--light);font-size:18px;max-width:600px;margin:0 auto;line-height:1.6}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:32px;max-width:1400px;margin:0 auto;padding:40px 40px 80px}
+.blog-card{background:var(--card);border:1px solid #1a1a1a;border-radius:8px;overflow:hidden;transition:border-color 0.2s,transform 0.2s}
+.blog-card:hover{border-color:var(--orange);transform:translateY(-4px)}
+.blog-card a{text-decoration:none;color:inherit;display:block;padding:32px}
+.blog-card .card-tag{color:var(--orange);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+.blog-card h2{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:#fff;margin-bottom:12px;line-height:1.2}
+.blog-card p{color:var(--light);font-size:15px;line-height:1.6;margin-bottom:16px}
+.blog-card .card-date{color:var(--grey);font-size:13px}
+.blog-empty{text-align:center;padding:80px 40px;max-width:800px;margin:0 auto}
+.blog-empty h2{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#fff;margin-bottom:16px}
+.blog-empty p{color:var(--light);font-size:16px;line-height:1.6;margin-bottom:32px}
+.blog-cta{display:inline-block;background:var(--orange);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;padding:14px 36px;text-decoration:none;transition:background 0.2s}
+.blog-cta:hover{background:#e55a28}
+footer{text-align:center;padding:40px;border-top:1px solid #1a1a1a}
+footer p{color:var(--grey);font-size:13px;letter-spacing:1px}
+footer span{font-weight:bold}
+@media(max-width:700px){
+nav{padding:16px 20px}
+.nav-links{gap:16px}
+.nav-links a{font-size:11px;letter-spacing:1px}
+.blog-grid{grid-template-columns:1fr;padding:24px 20px 60px}
+.blog-header{padding:100px 20px 40px}
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="/" class="nav-logo">HOME<span>FIT</span>GYMKIT</a>
+<ul class="nav-links">
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/#hero">Free Guide</a></li>
+<li><a href="/#quiz">Quiz</a></li>
+<li><a href="/#products">Products</a></li>
+<li><a href="/#about">About</a></li>
+<li><a href="/#socials">Follow</a></li>
+</ul>
+</nav>
+
+<header class="blog-header">
+<h1>The Home Gym Blog</h1>
+<p>Equipment reviews, setup guides, and workout tips — everything you need to train smart in a small space.</p>
+</header>
+
+<section class="blog-empty">
+<h2>Posts Coming Soon</h2>
+<p>We're working on in-depth guides and equipment reviews to help you build the perfect home gym. In the meantime, grab our free arms guide.</p>
+<a href="/#hero" class="blog-cta">Get Your Free Arms Guide</a>
+</section>
+
+<!--
+<section class="blog-grid">
+<article class="blog-card">
+<a href="/blog/best-adjustable-dumbbells-small-flat-uk.html">
+<span class="card-tag">Equipment Review</span>
+<h2>Best Adjustable Dumbbells for a Small Flat (UK 2026)</h2>
+<p>We scored 6 adjustable dumbbells across value, build quality, and apartment suitability. Here are the results.</p>
+<span class="card-date">March 2026</span>
+</a>
+</article>
+</section>
+-->
+
+<footer>
+<p>2026 <span style="font-weight:bold;"><span style="color:#fff;">HOME</span><span style="color:#FF6B35;">FIT</span><span style="color:#fff;">GYMKIT</span></span> - Train Smart - Small Space</p>
+</footer>
+</body>
+</html>

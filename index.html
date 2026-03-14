@@ -20,7 +20,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .hero-tag{display:inline-block;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);border:1px solid rgba(255,107,53,0.4);padding:6px 16px;border-radius:2px;margin-bottom:32px}
 h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,10vw,120px);line-height:0.9;letter-spacing:2px;margin-bottom:28px}
 h1 span{color:var(--orange)}
-.hero-sub{font-size:clamp(15px,2vw,18px);color:var(--light);max-width:800px;line-height:1.7;margin-bottom:48px}
+.hero-sub{font-size:clamp(15px,2vw,18px);color:var(--light);max-width:1000px;line-height:1.7;margin-bottom:48px}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
 .btn-primary{background:var(--orange);color:#000;font-family:'DM Sans',sans-serif;font-weight:500;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:16px 36px;text-decoration:none;border-radius:2px;transition:transform 0.2s,box-shadow 0.2s}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,107,53,0.4)}
@@ -29,7 +29,7 @@ h1 span{color:var(--orange)}
 section{padding:100px 40px;max-width:1400px;margin:0 auto}
 .section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:16px;display:block}
 h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,60px);letter-spacing:2px;line-height:1;margin-bottom:24px}
-.section-text{color:var(--light);font-size:16px;line-height:1.8;max-width:600px}
+.section-text{color:var(--light);font-size:16px;line-height:1.8;max-width:800px}
 .divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,#222,transparent);max-width:1400px;margin:0 auto}
 #quiz{text-align:center;background:var(--card);max-width:100%;padding:100px 40px;position:relative;overflow:hidden}
 #quiz::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--orange)}
@@ -86,8 +86,8 @@ footer span{color:var(--orange)}
 .product-score-bar { margin-top:auto; }
 
 /* ââ Arms Guide Section ââ */
-#arms-guide{padding:30px 5% 50px;background:#000;}
-.arms-inner{display:flex;flex-direction:column;gap:40px;max-width:720px;margin:0 auto;}
+#arms-guide{padding:30px 40px 50px;background:#000;max-width:1400px;margin:0 auto;}
+.arms-inner{display:flex;flex-direction:column;gap:40px;max-width:1000px;margin:0 auto;}
 .arms-text{width:100%;text-align:left;}
 .arms-text h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:8px 0 18px;color:#fff;}
 .arms-orange{color:#FF6B35;}
@@ -351,6 +351,7 @@ footer span{color:var(--orange)}
     })
     .catch(function(e){console.log('Location detection failed:',e);});
 })();</script>
+
 
 
 

@@ -107,7 +107,7 @@ footer span{color:var(--orange)}
 
 .li-arrow{color:#FF6B35;margin-right:8px;font-style:normal;}
 .arms-collector{padding-bottom:28px !important;}
-[data-fillout-id]{height:220px !important;min-height:220px !important;overflow:hidden;}
+
 
 .arms-guide-label{font-size:1.4rem !important;font-family:'Bebas Neue',sans-serif !important;letter-spacing:2px !important;color:#FF6B35 !important;font-weight:400 !important;margin-bottom:18px !important;}
 
@@ -121,7 +121,7 @@ footer span{color:var(--orange)}
 
 #socials svg:last-of-type,#socials > div:last-child,#socials > span:last-child{display:block;margin:0 auto;text-align:center;}
 
-#quiz [data-fillout-id]{height:900px !important;min-height:900px !important;}
+
 
 /* Force centre social grid and bottom logo on all screen sizes */
 .social-grid{display:flex !important;flex-wrap:wrap !important;justify-content:center !important;align-items:center !important;gap:16px !important;width:100% !important;}
@@ -165,7 +165,7 @@ footer span{color:var(--orange)}
     <div class="arms-collector" style="text-align: left;">
       
       <p class="arms-guide-label">RECEIVE PDF BY ENTERING EMAIL</p>
-      <div style="width: 100%; min-height: 220px; height: 220px;" data-fillout-id="q5SjoTLayZus" data-fillout-embed-type="standard" data-fillout-inherit-parameters="" data-fillout-button-text="Download PDF">
+      <div style="width: 100%; height: 220px; min-height: 220px;" data-fillout-id="q5SjoTLayZus" data-fillout-embed-type="standard" data-fillout-inherit-parameters="" data-fillout-button-text="Download PDF">
       </div>
       <script src="https://server.fillout.com/embed/v1/"></script>
     </div>
@@ -176,7 +176,7 @@ footer span{color:var(--orange)}
   </p>
 
   <div style="margin-top:40px;">
-    <div style="width: 100%; height: 900px; min-height: 900px;" data-fillout-id="5sSQ4VAYpkus" data-fillout-embed-type="standard" data-fillout-inherit-parameters="" data-fillout-dynamic-resize="">
+    <div style="width: 100%;" data-fillout-id="5sSQ4VAYpkus" data-fillout-embed-type="standard" data-fillout-inherit-parameters="" data-fillout-dynamic-resize="">
     </div>
   </div>
 </section>
@@ -310,9 +310,9 @@ footer span{color:var(--orange)}
     <a href="https://pinterest.com/homefitgymkit" target="_blank" class="social-link"><svg class="social-icon" viewBox="0 0 24 24" width="28" height="28"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"></path></svg></a>
     <a href="https://x.com/homefitgymkit" target="_blank" class="social-link"><svg class="social-icon" viewBox="0 0 24 24" width="28" height="28"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
   
-  <div style="text-align:center;margin-top:32px"><img src="https://yt3.googleusercontent.com/8pYMFYW1S27dun4Fxxewd4YKTbxO7WnKObP1hx2Zy7M4u_E9k2MjQrkX0qgj5YCat0DAcGJ1=s160-c-k-c0x00ffffff-no-rj" alt="HomeFitGymKit" style="width:80px;height:80px;border-radius:50%"></div>
+  
 </div>
-</section>
+<div style="display: flex; justify-content: center; width: 100%; margin-top: 40px;"><img src="https://yt3.googleusercontent.com/8pYMFYW1S27dun4Fxxewd4YKTbxO7WnKObP1hx2Zy7M4u_E9k2MjQrkX0qgj5YCat0DAcGJ1=s160-c-k-c0x00ffffff-no-rj" alt="HomeFitGymKit" style="display: block; margin: 0px auto;"></div></section>
 <footer>
   <p>2026 <span style="font-weight: bold;"><span style="color:#fff;">HOME</span><span style="color:#FF6B35;">FIT</span><span style="color:#fff;">GYMKIT</span></span> - Train Smart - Small Space - hello@homefitgymkit.com</p>
 </footer>
@@ -336,6 +336,7 @@ footer span{color:var(--orange)}
     })
     .catch(function(e){console.log('Location detection failed:',e);});
 })();</script>
+
 
 
 

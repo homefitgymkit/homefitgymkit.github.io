@@ -95,7 +95,7 @@ footer span{color:var(--orange)}
 .arms-inside-label{color:#FF6B35;font-weight:700;margin-bottom:10px;font-size:1rem;text-align:left;}
 .arms-list{list-style:none;padding:0;margin:0 0 22px;}
 .arms-list li{color:#ccc;padding:7px 0 7px 26px;position:relative;line-height:1.5;text-align:left;}
-.arms-list li::before{content:'â';color:#FF6B35;position:absolute;left:0;}
+
 .arms-footer-line{color:#fff;font-weight:700;font-size:1.05rem;text-align:left;}
 .arms-collector{width:100%;background:#111;border:2px solid #FF6B35;border-radius:14px;padding:36px 30px;text-align:center;box-sizing:border-box;}
 .doc-icon{font-size:3rem;display:block;margin-bottom:14px;}
@@ -104,6 +104,10 @@ footer span{color:var(--orange)}
 
 /* Override Fillout button if same-origin */
 .arms-collector iframe { border: none; }
+
+.li-arrow{color:#FF6B35;margin-right:8px;font-style:normal;}
+.arms-collector{padding-bottom:28px !important;}
+[data-fillout-id]{height:220px !important;min-height:220px !important;overflow:hidden;}
 </style>
 </head>
 <body>
@@ -132,16 +136,16 @@ footer span{color:var(--orange)}
       <p class="section-text">Skip the guesswork. This guide shows you the 3 core tools that actually work for arm training in a flat, scores 9 products across value, space, and performance, and includes a ready-to-use 30-minute workout.</p>
       <p class="arms-inside-label"><strong>What's inside:</strong></p>
       <ul class="arms-list">
-        <li>The 3 tools that do 90% of the work</li>
-        <li>9 products ranked: best budget, best value, best performance</li>
-        <li>A 30-minute arm workout you can start today</li>
+        <li><span class="li-arrow">→</span> The 3 tools that do 90% of the work</li>
+        <li><span class="li-arrow">→</span> 9 products ranked: best budget, best value, best performance</li>
+        <li><span class="li-arrow">→</span> A 30-minute arm workout you can start today</li>
       </ul>
       <p class="arms-footer-line">No fluff. Just what works.</p>
     </div>
     <div class="arms-collector" style="text-align: left;">
       <span class="doc-icon">ð</span>
-      <p class="arms-guide-label">HomeFitGymKit 2026 Edition · Free PDF Guide</p>
-      <div style="width:100%;min-height:600px;" data-fillout-id="q5SjoTLayZus" data-fillout-embed-type="standard" data-fillout-inherit-parameters="" data-fillout-dynamic-resize="" data-fillout-button-text="Download PDF">
+      <p class="arms-guide-label">RECEIVE PDF BY ENTERING EMAIL</p>
+      <div style="width: 100%; min-height: 220px; height: 220px;" data-fillout-id="q5SjoTLayZus" data-fillout-embed-type="standard" data-fillout-inherit-parameters="" data-fillout-button-text="Download PDF">
       </div>
       <script src="https://server.fillout.com/embed/v1/"></script>
     </div>
@@ -300,5 +304,6 @@ footer span{color:var(--orange)}
     })
     .catch(function(e){console.log('Location detection failed:',e);});
 })();</script>
+
 
 </body></html>
